@@ -1,0 +1,29 @@
+.button {
+  cursor: pointer;
+  color: #fff;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #4db1b9;
+  border: 0;
+  border-radius: .35rem;
+
+  &[disabled] {
+    background: #9fc9d0;
+    cursor: not-allowed;
+  }
+
+  &--small {
+    cursor: pointer;
+    padding: .75rem;
+    background: #f8f8f8;
+    border: 0;
+    border-top-right-radius: .35rem;
+    border-bottom-right-radius: .35rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: .75rem;
+    color: #888;
+  }
+}

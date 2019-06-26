@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "wesbos"
+  ],
+  "rules": {
+    "no-unused-expressions": ["error", {
+      "allowTernary": true,
+      "allowShortCircuit": true
+    }],
+    "no-unused-vars": [
+      1,
+      {
+        "ignoreSiblings": true,
+        "argsIgnorePattern": "res|next|^err"
+      }
+    ]
+  }
+}
