@@ -44,4 +44,6 @@ Apparently, some loyal customers would still love to give the company money by u
 
 After all the unforseen events, you decided be more self-initiative to win back your boss' favor. So, you asked your coworkers to build you a nifty little [FAQ section](https://en.wikipedia.org/wiki/FAQ) on the left side of the form. 
 
-Your friends thought [accordions](https://en.wikipedia.org/wiki/Accordion_(GUI)) are the way to go for FAQs so they went ahead with the markup and styling in a branch called `feature-accordion`. They told you to `checkout` the branch and  continue the JavaScript part.
+Your friends thought [accordions](https://en.wikipedia.org/wiki/Accordion_(GUI)) are the way to go for FAQs so they went ahead with the markup and styling in a branch called `feature-accordion`. They told you to `checkout` the branch and finish the JavaScript part. To expand each accordion item on click, add the `accordion--active` class. Since we are dealing with a small form, only one accordion can be expanded at one time like this:
+
+
