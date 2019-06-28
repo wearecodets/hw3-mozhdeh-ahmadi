@@ -6,9 +6,9 @@
 >
 > Still unclear about requesting a PR review? [See the course info](https://github.com/wearecodets/phase-two/blob/master/week-zero/about.md#homework-pull-request).
 
-## Getting Started
+## Objective
 
-After completing this homework, you should end up with five branches: `master`, `feature-accordion` and three other bug fix branches.
+After completing this assignment, you should have five branches: `master`, `feature-accordion` and three other bug fixing branches. You need to open four PRs for code reviews.
 
 **Do not modify `index.html`, `index.js` or `.scss` files in `src/stylesheets`. Your code should only be in `src/main.js`.**
 
@@ -42,8 +42,19 @@ Apparently, some loyal customers would still love to give the company money by u
 
 ### 5. Implement Accordion Feature
 
-After all the unforseen events, you decided be more self-initiative to win back your boss' favor. So, you asked your coworkers to build you a nifty little [FAQ section](https://en.wikipedia.org/wiki/FAQ) on the left side of the form. 
+After all the unexpected events, you decided be more self-initiative to win back your boss' favor. So, you asked your coworkers to begin building an [FAQ section](https://en.wikipedia.org/wiki/FAQ) on the form. 
 
-Your friends thought [accordions](https://en.wikipedia.org/wiki/Accordion_(GUI)) are the way to go for FAQs so they went ahead with the markup and styling in a branch called `feature-accordion`. They told you to `checkout` the branch and finish the JavaScript part. To expand each accordion item on click, add the `accordion--active` class. Since we are dealing with a small form, only one accordion can be expanded at one time like this:
+Your friends began working on an [accordion](https://en.wikipedia.org/wiki/Accordion_(GUI)) in a separate branch called `feature-accordion`. They finished the markup in `index.html` and styling in `src/stylesheets/accordion.scss`. They told you to `checkout` the branch and finish the JavaScript part with these requirements: 
+
+  * Add the `accordion--active` class to expand each accordion item on click:
+
+    ![active](https://res.cloudinary.com/yicf/image/upload/w_400/v1561735768/Code%20The%20Web/active.gif)
+
+  * Only one accordion item can be shown at a time:
+
+    ![shown](https://res.cloudinary.com/yicf/image/upload/w_400/v1561731722/Code%20The%20Web/accordion.gif)
+
+
+
 
 
