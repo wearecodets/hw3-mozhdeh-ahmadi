@@ -6,13 +6,13 @@
 >
 > Still unclear about requesting a PR review? [See the course info](https://github.com/wearecodets/phase-two/blob/master/week-zero/about.md#homework-pull-request).
 
-If you finish early with this homework, go ahead and prepare for [next week](https://github.com/wearecodets/phase-two/tree/master/week-three).
-
 ## Getting Started
 
-If it's your first time working on this project, run `npm install`. Otherwise, just `npm start` to begin working.
+After completing this homework, you should end up with five branches: `master`, `feature-accordion` and three other bug fix branches.
 
-**Do not modify `index.html` or `.scss` files in `src/stylesheets`. Your code should only be in `src/main.js`.**
+**Do not modify `index.html`, `index.js` or `.scss` files in `src/stylesheets`. Your code should only be in `src/main.js`.**
+
+If it's your first time working on this project, run `npm install`. Otherwise, just `npm start` to begin working.
 
 ## Branching Rules
 
