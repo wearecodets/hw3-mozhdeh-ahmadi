@@ -18,15 +18,15 @@ If it's your first time working on this project, run `npm install`. Otherwise, j
 
 1. Never work directly on the `master` branch. 
 2. `origin/master` always represents the latest code deployed to production (Netlify).
-2. Create a new branch for each homework topic. 
-3. Prefix your branch with `feature-` to work on new features. For example, `feature-accordion`.
-4. Prefix your branch with `fix-` to work on bug fixes. For example, `fix-paypal`.
+2. Create a new branch for each homework topic:
+    - Prefix your branch with `feature-` to work on new features. For example, `feature-accordion`.
+    - Prefix your branch with `fix-` to work on bug fixes. For example, `fix-paypal`.
 
 ## Directions
 
 ### 1. Deploy to Production
 
-Connect this Github repo's `master` branch to Netlify and customize the domain URL to have the same name as this homework repo – for example: `http://hw2-niko.netlify.com`. From now on, every merged PR triggers a deployment to this URL. When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below this line:
+Connect this Github repo's `master` branch to Netlify and customize the domain URL to have the same name as this homework repo – for example: `http://hw2-niko.netlify.com`. From now on, every merged PR will trigger a deployment to this URL. When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below this line:
 
 ### 2. Payment Total Bug
 
