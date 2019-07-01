@@ -26,9 +26,9 @@ If it's your first time working on this project, run `npm install`. Otherwise, j
 
 ### 1. Deploy to Production 
 
-Connect this Github repo's `master` branch to Netlify and customize the domain URL to have the same name as this homework repo – for example: `http://hw3-niko.netlify.com`. From now on, every merged PR will trigger a deployment to this URL. When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below this line:
+Just like the previous homework, connect this Github repo's `master` branch to Netlify and customize the domain URL to have the same name as this homework repo – for example: `http://hw3-niko.netlify.com`. From now on, every merged PR will trigger a deployment to this URL. 
 
-### 2. Implement Toast Notification Feature 
+When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below. Note, for this, you may commit directly on `master` since it is such a tiny change.
 
 ### 3. Implement the Checkout Feature
 
