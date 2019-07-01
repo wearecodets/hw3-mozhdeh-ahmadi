@@ -1,8 +1,8 @@
-# 💳 Payment Form Exercise 
+# 💳 Payment Form Exercise (Part 2) 
 
-> :clock9:&nbsp; &nbsp; **Due:** Saturday, July 6 @ 9 am
+> :clock9:&nbsp; &nbsp; **Due:** Saturday, July 13 @ 9 am
 >
-> :mag_right:&nbsp; &nbsp; **Code Review:** Thursday, July 4 
+> :mag_right:&nbsp; &nbsp; **Code Review:** Thursday, July 11 
 >
 > Still unclear about requesting a PR review? [See the course info](https://github.com/wearecodets/phase-two/blob/master/week-zero/about.md#homework-pull-request).
 
@@ -24,37 +24,26 @@ If it's your first time working on this project, run `npm install`. Otherwise, j
 
 ## Directions
 
-### 1. Deploy to Production
+### 1. Deploy to Production 
 
-Connect this Github repo's `master` branch to Netlify and customize the domain URL to have the same name as this homework repo – for example: `http://hw2-niko.netlify.com`. From now on, every merged PR will trigger a deployment to this URL. When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below this line:
+Connect this Github repo's `master` branch to Netlify and customize the domain URL to have the same name as this homework repo – for example: `http://hw3-niko.netlify.com`. From now on, every merged PR will trigger a deployment to this URL. When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below this line:
 
-### 2. Payment Total Bug
+### 2. Implement Toast Notification Feature 
 
-Many angry customers reported that the payment form only shows zero amount despite the payment plan selected (annually or monthly). Your boss told you to debug the issue so the company can start making money again. He wanted to make sure that the total amount is calculated correctly. Additionally, he said that the total needs to show up in two different places in the form.
+### 3. Implement the Checkout Feature
 
-### 3. Form Submit Bug
+Last week the boss complained that the Pay button was unclickable, and you have pushed a fix to make it clickable.  But, this did not make him happy and he wants instead a success fail checkout confirmation.
 
-The boss complained that the Pay button is unclickable. He said that it makes sense if customers have not selected any payment plans—but after the total is calculated, this bug is unacceptable and must be immediately fixed!
+Since the boss is hard to predict, your co-workers thought it would be better to build a small example of what the checkout experience would be. Here is what they told you to build:
 
-### 3. PayPal Amount Bug
+after the pay button is clicked, add a faint form overlay with a loading spinner, make it spins for 3 seconds then add a success class with a thank you message. Put the product carousel in there.
 
-Apparently, some loyal customers would still love to give the company money by using the PayPal link. However, many felt cheated when they found out the crazy amount of $1,234 was [hard coded](https://en.wikipedia.org/wiki/Hard_coding) in the `href` attribute of the link. *"Fix it!"* said the boss.
+- After the pay button is clicked, toggle a full screen modal with a loader.
+- Using [`setTimeout()`](https://www.w3schools.com/jsref/met_win_settimeout.asp), simulate a slow 3-second network request. The loader will continue animating at this point.
+- Display the success/failure screen after three seconds.
+    - In case of success, print a thank you message with the first name of the user.
+    - In case of failure, print a message with the user's email address.
+- When the user closes the modal dialog, alternate the checkout outcome between success and failure, so the next time the pay button is clicked, the opposite result will happen.
 
-### 5. Implement Accordion Feature
-
-After all the unexpected events, you decided be more self-initiative to win back your boss' favor. So you asked your coworkers to begin building an [FAQ section](https://en.wikipedia.org/wiki/FAQ) for the form. 
-
-Your friends began working on an [accordion](https://en.wikipedia.org/wiki/Accordion_(GUI)) in a separate branch called `feature-accordion`. They finished the markup in `index.html` and styling in `src/stylesheets/accordion.scss`. They told you to `checkout` the branch and finish the JavaScript part with these requirements: 
-
-  * Add the `accordion--active` class to expand each accordion item on click:
-
-    ![active](https://res.cloudinary.com/yicf/image/upload/w_400/v1561735768/Code%20The%20Web/active.gif)
-
-  * Only one accordion item can be shown at a time:
-
-    ![shown](https://res.cloudinary.com/yicf/image/upload/w_400/v1561731722/Code%20The%20Web/accordion.gif)
-
-
-
-
+Again, they have done the non-JS part in a separate branch called `feature-checkout`, and all you need to do is code the JS.
 
