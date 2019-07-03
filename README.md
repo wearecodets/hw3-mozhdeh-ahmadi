@@ -14,6 +14,10 @@ After completing this assignment, you should have five branches: `master`, `feat
 
 If it's your first time working on this project, run `npm install`. Otherwise, just `npm start` to begin working.
 
+Here's how the form should behave after this assignment:
+
+![visual](https://res.cloudinary.com/yicf/image/upload/w_400/v1562042486/Code%20The%20Web/hw-one.gif)
+
 ## Branching Rules
 
 1. Never work directly on the `master` branch. 
@@ -36,7 +40,7 @@ Many angry customers reported that the payment form only shows zero amount despi
 
 The boss complained that the Pay button is unclickable. He said that it makes sense if customers have not selected any payment plans—but after the total is calculated, this bug is unacceptable and must be immediately fixed!
 
-### 3. PayPal Amount Bug
+### 4. PayPal Amount Bug
 
 Apparently, some loyal customers would still love to give the company money by using the PayPal link. However, many felt cheated when they found out the crazy amount of $1,234 was [hard coded](https://en.wikipedia.org/wiki/Hard_coding) in the `href` attribute of the link. *"Fix it!"* said the boss.
 
