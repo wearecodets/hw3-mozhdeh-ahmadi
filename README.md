@@ -1,22 +1,18 @@
-# 💳 Payment Form Exercise 
+# 💳 Payment Form Exercise (Part 2) 
 
-> :clock9:&nbsp; &nbsp; **Due:** Saturday, July 6 @ 9 am
+> :clock9:&nbsp; &nbsp; **Due:** Saturday, July 13 @ 9 am
 >
-> :mag_right:&nbsp; &nbsp; **Code Review:** Thursday, July 4 
+> :mag_right:&nbsp; &nbsp; **Code Review:** Thursday, July 11 
 >
 > Still unclear about requesting a PR review? [See the course info](https://github.com/wearecodets/phase-two/blob/master/week-zero/about.md#homework-pull-request).
 
 ## Objective
 
-After completing this assignment, you should have five branches: `master`, `feature-accordion` and three other bug fixing branches. You need to open four PRs for code reviews.
+After completing this assignment, you should have two branches: `master` and `feature-checkout`. Only one PR is needed. 
 
 **Do not modify `index.html`, `index.js` or `.scss` files in `src/stylesheets`. Your code should only be in `src/main.js`.**
 
 If it's your first time working on this project, run `npm install`. Otherwise, just `npm start` to begin working.
-
-Here's how the form should behave after this assignment:
-
-![visual](https://res.cloudinary.com/yicf/image/upload/w_400/v1562042486/Code%20The%20Web/hw-one.gif)
 
 ## Branching Rules
 
@@ -28,37 +24,39 @@ Here's how the form should behave after this assignment:
 
 ## Directions
 
-### 1. Deploy to Production
+### 1. Deploy to Production 
 
-Connect this Github repo's `master` branch to Netlify and customize the domain URL to have the same name as this homework repo – for example: `http://hw2-niko.netlify.com`. From now on, every merged PR will trigger a deployment to this URL. When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below this line:
+Just like the previous homework, connect this Github repo's `master` branch to Netlify and customize the domain URL to have the same name as this homework repo – for example: `http://hw3-niko.netlify.com`. From now on, every merged PR will trigger a deployment to this URL. 
 
-### 2. Payment Total Bug
+When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below. Note that you may commit directly on `master` for this since it is such a tiny change.
 
-Many angry customers reported that the payment form only shows zero amount despite the payment plan selected (annually or monthly). Your boss told you to debug the issue so the company can start making money again. He wanted to make sure that the total amount is calculated correctly. Additionally, he said that the total needs to show up in two different places in the form.
+### 2. Implement the Checkout Feature
 
-### 3. Form Submit Bug
+Your fix for the unclickable Pay button last week did not make your boss happy. Instead, he wants your team to build a prototype of the checkout feature.
 
-The boss complained that the Pay button is unclickable. He said that it makes sense if customers have not selected any payment plans—but after the total is calculated, this bug is unacceptable and must be immediately fixed!
+Since the boss is big on [UX](https://en.wikipedia.org/wiki/User_experience), your coworkers have styled a checkout flow in a separate branch called `feature-checkout`; All you need to do is `git checkout` and code the JavaScript. The checkout flow they built works like this:
 
-### 4. PayPal Amount Bug
+1. After the pay button is clicked, a full page overlay with a loader needs to be displayed using the `modal--full` class.
 
-Apparently, some loyal customers would still love to give the company money by using the PayPal link. However, many felt cheated when they found out the crazy amount of $1,234 was [hard coded](https://en.wikipedia.org/wiki/Hard_coding) in the `href` attribute of the link. *"Fix it!"* said the boss.
+2. While the loader animates, use [`setTimeout()`](https://www.w3schools.com/jsref/met_win_settimeout.asp), to simulate a slow connection of three seconds. Note that ***3 seconds = 3000 milliseonds***.
 
-### 5. Implement Accordion Feature
+3. After the delay, toggle the `.checkout--finished` class on the `.checkout` component, removing the loader and bringing a result screen into the modal. 
 
-After all the unexpected events, you decided be more self-initiative to win back your boss' favor. So you asked your coworkers to begin building an [FAQ section](https://en.wikipedia.org/wiki/FAQ) for the form. 
+    This result screen must be either a success (`.checkout--success`) or failure (`.checkout--failed`):
 
-Your friends began working on an [accordion](https://en.wikipedia.org/wiki/Accordion_(GUI)) in a separate branch called `feature-accordion`. They finished the markup in `index.html` and styling in `src/stylesheets/accordion.scss`. They told you to `checkout` the branch and finish the JavaScript part with these requirements: 
+    - ✅ In case of success, print a thank you message with the first name of the user and a brief message:
+        > Thanks, [FIRST NAME] \
+        > We've received your payment. \
+        > Please check your inbox for a receipt.
+    - ❌ In case of failure, print a rejection message with the user's email address:
+        > Payment Rejected. \
+        > Your transaction could not be processed. \
+        > We've sent you an email at [USER@EMAIL.COM] with the details.
 
-  * Add the `accordion--active` class to expand each accordion item on click:
+    See this screen grab for visual clarification:
 
-    ![active](https://res.cloudinary.com/yicf/image/upload/w_400/v1561735768/Code%20The%20Web/active.gif)
+    ![checkout-classing](https://res.cloudinary.com/yicf/image/upload/w_500/v1561977776/Code%20The%20Web/checkout-classing.gif)
 
-  * Only one accordion item can be shown at a time:
+4. When the user closes the modal, remove the approprite classes. Additionally, alternate the checkout outcome between success and failure, so the next time the pay button is clicked, the opposite result will happen — *Success, Failure, Success, Failure, and so on.*
 
-    ![shown](https://res.cloudinary.com/yicf/image/upload/w_400/v1561731722/Code%20The%20Web/accordion.gif)
-
-
-
-
-
+    ![checkout](https://res.cloudinary.com/yicf/image/upload/w_500/v1561977299/Code%20The%20Web/checkout.gif)
