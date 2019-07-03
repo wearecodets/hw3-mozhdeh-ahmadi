@@ -28,7 +28,7 @@ If it's your first time working on this project, run `npm install`. Otherwise, j
 
 Just like the previous homework, connect this Github repo's `master` branch to Netlify and customize the domain URL to have the same name as this homework repo – for example: `http://hw3-niko.netlify.com`. From now on, every merged PR will trigger a deployment to this URL. 
 
-When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below. Note that you may commit directly on `master` for this problem since it is such a tiny change.
+When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below. Note that you may commit directly on `master` for this since it is such a tiny change.
 
 ### 2. Implement the Checkout Feature
 
