@@ -4,19 +4,17 @@ let amount = 0;
 
 const form = document.querySelector('.form');
 const total = document.querySelector('.form__total');
-const payButton = document.querySelector('.form__pay');
-const payButtonTotal = payButton.querySelector('span');
 const paypalLink = document.querySelector('a.form__cc-heading');
 
 function calculateTotal() {
-  const frequency = form.plan.value.toLowerCase();
-  amount = frequency === 'monthly' ? monthlyCost : annualCost * 12;
+  const frequency = form.plan.value;
+  amount = frequency === 'Monthly' ? monthlyCost : annualCost * 12;
 }
 
 function updateTotal() {
-  payButton.disabled = false;
+  form.submit.disabled = false;
   total.textContent = `$${amount}`;
-  payButtonTotal.textContent = `$${amount}`;
+  form.submit.textContent = `Pay $${amount} Now`;
   paypalLink.setAttribute('href', `https://paypal.me/nikosolihin/${amount}`);
 }
 
