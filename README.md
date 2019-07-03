@@ -8,7 +8,7 @@
 
 ## Objective
 
-After completing this assignment, you should have five branches: `master`, `feature-accordion` and three other bug fixing branches. You need to open four PRs for code reviews.
+After completing this assignment, you should have two branches: `master` and `feature-checkout`. Only one PR is needed. 
 
 **Do not modify `index.html`, `index.js` or `.scss` files in `src/stylesheets`. Your code should only be in `src/main.js`.**
 
@@ -28,22 +28,32 @@ If it's your first time working on this project, run `npm install`. Otherwise, j
 
 Just like the previous homework, connect this Github repo's `master` branch to Netlify and customize the domain URL to have the same name as this homework repo – for example: `http://hw3-niko.netlify.com`. From now on, every merged PR will trigger a deployment to this URL. 
 
-When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below. Note, for this, you may commit directly on `master` since it is such a tiny change.
+When you are done, [add a status badge](https://www.netlify.com/docs/continuous-deployment/#status-badges) below. Note that you may commit directly on `master` for this problem since it is such a tiny change.
 
-### 3. Implement the Checkout Feature
+### 2. Implement the Checkout Feature
 
-Last week the boss complained that the Pay button was unclickable, and you have pushed a fix to make it clickable.  But, this did not make him happy and he wants instead a success fail checkout confirmation.
+Your fix for the unclickable Pay button last week did not make your boss happy. Instead, he wants your team to build a prototype of the checkout feature.
 
-Since the boss is hard to predict, your co-workers thought it would be better to build a small example of what the checkout experience would be. Here is what they told you to build:
+Since the boss is big on [UX](https://en.wikipedia.org/wiki/User_experience), your coworkers have styled a checkout flow in a separate branch called `feature-checkout`; All you need to do is `git checkout` and code the JavaScript. The checkout flow they built works like this:
 
-after the pay button is clicked, add a faint form overlay with a loading spinner, make it spins for 3 seconds then add a success class with a thank you message. Put the product carousel in there.
+1. After the pay button is clicked, a full page overlay with a loader needs to be displayed using the `modal--full` class.
 
-- After the pay button is clicked, toggle a full screen modal with a loader.
-- Using [`setTimeout()`](https://www.w3schools.com/jsref/met_win_settimeout.asp), simulate a slow 3-second network request. The loader will continue animating at this point.
-- Display the success/failure screen after three seconds.
-    - In case of success, print a thank you message with the first name of the user.
-    - In case of failure, print a message with the user's email address.
-- When the user closes the modal dialog, alternate the checkout outcome between success and failure, so the next time the pay button is clicked, the opposite result will happen.
+2. While the loader animates, use the [`setTimeout()`](https://www.w3schools.com/jsref/met_win_settimeout.asp), to simulate a slow connection of three seconds. Note that ***3 seconds = 3000 milliseonds***.
 
-Again, they have done the non-JS part in a separate branch called `feature-checkout`, and all you need to do is code the JS.
+3. After the delay, toggle the `.checkout--finished` class on the `.checkout` component, removing the loader and bringing a result screen into the modal. This result screen must be either a success (`.checkout--success`) or failure (`.checkout--failed`):
+    - ✅ In case of success, print a thank you message with the first name of the user and a brief message:
+        > Thanks, [NAME] \
+        > We've received your payment. \
+        > Please check your inbox for a receipt.
+    - ❌ In case of failure, print a rejection message with the user's email address:
+        > Payment Rejected. \
+        > Your transaction could not be processed. \
+        > We've sent you an email at [NAME@EMAIL.COM] with the details.
 
+    See this screen grab for visual clarification:
+
+    ![checkout-classing](https://res.cloudinary.com/yicf/image/upload/w_500/v1561977776/Code%20The%20Web/checkout-classing.gif)
+
+4. When the user closes the modal dialog, alternate the checkout outcome between success and failure, so the next time the pay button is clicked, the opposite result will happen — *Success, Failure, Success, Failure, etc.*
+
+    ![checkout](https://res.cloudinary.com/yicf/image/upload/w_500/v1561977299/Code%20The%20Web/checkout.gif)
