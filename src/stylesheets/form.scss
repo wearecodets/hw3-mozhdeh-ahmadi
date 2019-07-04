@@ -89,6 +89,30 @@
     button {
       width: 35%;
     }
+
+    &--success {
+      border-color: #cbddc6;
+
+      input {
+        border-color: #cbddc6;
+      }
+
+      button {
+        background-color: #edf3eb;
+      }
+    }
+
+    &--failed {
+      border-color: #ff867c;
+
+      input {
+        border-color: #ff867c;
+      }
+
+      button {
+        background-color: #fde5e3;
+      }
+    }
   }
 
   &__right {
