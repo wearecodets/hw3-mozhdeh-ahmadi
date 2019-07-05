@@ -24,7 +24,7 @@ function validateCode(codeRaw) {
     message.textContent = 'Voucher code is expired. Please try again.';
   } else {
     isValid = false;
-    message.textContent = "That voucher doesn't exist";
+    message.textContent = "That voucher doesn't exist.";
   }
 }
 
@@ -46,12 +46,3 @@ form.voucherButton.addEventListener('click', function(e) {
   }, 1500);
   setTimeout(closeToast, 5000);
 });
-
-// REQUIREMENTS:
-// - Must have a close button.
-// - Simulate 1.5 second network delay.
-// - Apply button must have two states: "Apply Code"/"Applying...".
-// - Notification must have two states for valid/expired coupons.
-// - Must validate coupon codes:
-//     - Valid: CTW20OFF, ROSHANRUSH
-//     - Expired: CTW123, MAMPANGMADNESS
