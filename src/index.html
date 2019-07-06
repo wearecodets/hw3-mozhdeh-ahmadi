@@ -10,6 +10,40 @@
 <body>
   <!-- -----------👇 Only pay attention below this line 👇----------- -->
 
+  <div class="modal">
+    <div class="modal__wrapper">
+      <button class="modal__close">
+        <svg aria-hidden="true" role="presentation">
+          <use href="#icon-close" />
+        </svg>
+      </button>
+      <div class="checkout">
+        <div class="checkout__loader">
+          <svg aria-hidden="true" role="presentation">
+            <use href="#icon-logo" />
+          </svg>
+          <h2 class="thin center">Loading...</h2>
+          <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="checkout__result">
+          <svg aria-hidden="true" role="presentation">
+            <use href="#icon-success" />
+          </svg>
+          <svg aria-hidden="true" role="presentation">
+            <use href="#icon-error" />
+          </svg>
+          <h2 class="checkout__result-title thin center">Write Message Title here</h2>
+          <h3 class="checkout__result-description center">Write Message Description here</h3>
+          <button class="checkout__result-close button">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="toast">
     <div class="toast__icon">
       <svg aria-hidden="true" role="presentation">
